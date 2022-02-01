@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>  
+    <title>Inicio</title>
+</head>
+<body>
+    <header>
+        <nav class="topo">
+            <ul class="menu">
+                <li><img src="./img/criptografia.png" alt=""></li>
+                <li id="textomenu"> Desafio Lógica Alura - ONE</li>                
+            </ul>
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/jumozaga"><span class="fab fa-linkedin in"></span></a></li>
+                <li><a href="https://www.github.com/jumozaga"><span class="fab fa-github"></span></a></li>
+                <li><a href="https://www.bitbucket.com/jumozaga"><span class="fab fa-bitbucket"></span></a></li>
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Criptografia básica de texto</h1>
+
+        <table border="0" width="100%"  cellpadding="10">
+            <tr>    
+                <td width="50%" valign="top">
+                    <form class="ativo" action="">
+                        <span>TEXTO PARA CRIPTOGRAFIA OU DESCRIPTOGRAFIA</span><br>
+                        <textarea id="caixatexto1" rows="15" cols="75" maxlength="500"></textarea><br>
+                        <button id="encode"> Criptografar</button>
+                        <button id="uncode" > Desencriptografar</button>
+                    </form>
+                </td>    
+                <td width="50%" valign="top">
+                        <span>  RESULTADO</span><br>
+                        <textarea id="caixatexto2" rows="15" cols="75" maxlength="500"></textarea><br>
+                </td>    
+            </tr>
+        </table>
+
+    </main>
+
+    <footer class="rodape">
+        <div>
+            <table border="0" width="28%"  cellpadding="2">
+                <tr>
+                    <td> Desenvolvido por Juliana Mozaga Neves</td>
+                    <td><a href="mailto:jumozaga@yahoo.com"> <img src="./img/emailMe.ico" alt="email"> </a></td>
+                </tr>
+            </table>        
+         </div>
+
+
+    </footer>
+
+<script src="/js/index.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
+
+<script>
+    var encryptedAES = CryptoJS.AES.encrypt("Message", "My Secret Passphrase");
+    var decryptedBytes = CryptoJS.AES.decrypt(encryptedAES, "My Secret Passphrase");
+    var plaintext = decryptedBytes.toString(CryptoJS.enc.Utf8);
+</script>

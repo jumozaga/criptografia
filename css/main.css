@@ -1,0 +1,27 @@
+body {
+    background-color: black;
+    color: blanchedalmond;
+}
+#caixatexto1,#caixatexto2{
+    background: darkslateblue;
+    color: chartreuse;
+}
+button{
+    color: burlywood;
+    background-color: dimgray;
+
+}
+.rodape{
+    text-size-adjust: 150;
+    font-size: larger;
+    color: darkorchid;
+}
+#textomenu{
+    size: 50px;
+    font-size: 25;
+  
+}
+
+.icons{
+   
+}
